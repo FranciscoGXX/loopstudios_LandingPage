@@ -37,7 +37,7 @@ img {
     row-gap: 5rem;
     padding: 0;
     min-width: 375px;
-    /*8 rem*/
+    max-width: 1440px;
 }
 
 /*Header Content*/
@@ -528,14 +528,6 @@ img {
     /*History*/
 
     .HistoryContent {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 30rem; /*29rem*/
-        grid-template-areas: "Column1";
-        align-items: center;
-        row-gap: 1rem;
-        padding: 0 1.7rem;
-
         grid-template-columns: 34rem;
         margin-left: 10rem;
     }
@@ -591,4 +583,24 @@ img {
 
 
 
+}
+
+/*@media Desktop: 1366px*/
+
+@media screen and (min-width:1366px){
+
+    .mainContent{
+        row-gap: 10rem;
+    }
+
+    .HistoryContent {
+        grid-template-columns: 40rem;
+        margin-left: 9rem;
+    }
+
+    .History__Description {
+        top: 1.2rem;
+        width: 30rem;
+    }
+   
 }
