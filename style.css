@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 15px;
+}
+
+
+
+body{
+    max-width:375px;
+}
+
+:root {
+    /*Colors*/
+    --White: hsl(0, 0%, 100%); 
+    --Black: hsl(0, 0%, 0%);
+    --Dark_Gray: hsl(0, 0%, 55%); 
+    --Very_Dark_Gray: hsl(0, 0%, 41%);
+
+    /*Fonts*/
+    --Josefin_Sans:'Josefin Sans', sans-serif;
+    --Alata: 'Alata', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.mainContent{
+    max-width:375px;
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+}
+
+/*Header Content*/
+.Header{
+    display: grid;
+    color: var(--White);
+    grid-template-rows: minmax(4rem,1fr) 18rem;/*35 rem*/
+    background-image: url(./images/mobile/image-hero.jpg);
+    background-size: cover;
+    background-position: center;
+
+    padding: 1rem;
+}
+
+/*Header Nav*/
+.Header__Nav{
+    display: grid;
+    grid-template-rows: 1fr;
+    /* background-color: red; */
+}
+
+.Header__Nav--Top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header__Nav--Top>img{
+    height: 1.3rem;
+}
+
+/*Header Toggle*/
+
+.Header__Nav--Toggle{
+    margin: .8rem 0;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: .6rem;
+    padding: .5rem;
+    display: flex;
+    height:15rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-200%);
+    font-family: var(--Alata);
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+
+/* .Header__Nav--Toggle>a{
+    opacity: 0;
+} */
+
+
+/*Class for toggle menu*/
+
+.Toggle{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.Toggle>a{
+    opacity: 1;
+}
+
+/*Header Body*/
+.Header__Body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--White);
+    font-family: var(--Josefin_Sans);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.Header__Body--Title{
+    /* width: 20rem;
+    word-wrap: break-word;
+    background-color: green;
+    overflow: hidden; */
+}
+
