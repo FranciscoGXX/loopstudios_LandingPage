@@ -140,11 +140,12 @@ img {
     grid-template-rows: 17rem 20rem;
     row-gap: 1rem;
     padding: 0 1.7rem;
+    /* margin: 0 auto; */
 }
 
 .HistoryContent>img {
     max-height: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .HistoryContent>img:nth-child(2) {
@@ -376,7 +377,7 @@ img {
     .HistoryContent {
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: 29rem;
+        grid-template-columns: 30rem; /*29rem*/
         grid-template-areas: "Column1";
         align-items: center;
         row-gap: 1rem;
@@ -405,8 +406,9 @@ img {
         transform: translateY(40%);
         position: relative;
         z-index: 9;
-        left: 23.3rem;
-        top: -1.5rem;
+        left: 79%; 
+        /* 23.3rem */
+        top: -1.3rem;
         padding: 3rem 0 0rem 0;
         /* overflow: hidden; */
     }
@@ -452,7 +454,7 @@ img {
 
     .Creation__Items {
         grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(4, 10rem);
+        grid-template-columns: repeat(4,20%); /*repeat(4, 10rem)*/
         justify-content: center;
         gap: 1rem;
     }
@@ -519,5 +521,59 @@ img {
     .Fotter_Social{
         justify-content: end;
     }
+}
+
+/*@media Desktop: 1024px*/
+
+@media screen and (min-width:1024px){
+
+    /*Main*/
+    .mainContent{
+        grid-template-rows: 38rem 20rem 48rem 6rem;
+        row-gap: 8rem; 
+        /*28rem 20rem 48rem 6rem*/
+    }
+
+    /*Header*/
+    .Header{
+        padding: 0 6.9rem;
+    }
+
+    .Header__Body{
+        width: 32rem;
+        margin-top: 4rem;
+        height: 15rem;
+        padding: 0 2rem;
+    }
+
+    /*History*/
+
+    .HistoryContent {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 30rem; /*29rem*/
+        grid-template-areas: "Column1";
+        align-items: center;
+        row-gap: 1rem;
+        padding: 0 1.7rem;
+
+        grid-template-columns: 34rem;
+        margin-left: 10rem;
+    }
+
+    .History__Description {
+        top: 0;
+        padding: 3rem 0 1rem 0;
+        width: 28rem;
+        left: 82%;
+    }
+
+    /*Creations*/
+
+    
+
+
+
+
 
 }
