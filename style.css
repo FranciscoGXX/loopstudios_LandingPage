@@ -429,28 +429,7 @@ img {
         row-gap: 2rem;
     }
 
-    /* .CreationContent>p{
-        display: none;
-    }
-
-    .Creation__Top--Desktop{
-        display: flex;
-        justify-content: space-between;
-        padding: 0 2rem;
-        align-items: center;
-    }
-
-    .Creation__Top--Desktop>p{
-        text-transform: uppercase;
-        font-family: var(--Josefin_Sans);
-        font-size: 2rem;
-    }
-
-    .Creation__Top--Desktop>.Creation__SeeMore>button{
-        padding: .2rem 2.3rem;
-        font-size: 1rem;
-        border: 1px solid var(--Very_Dark_Gray);
-    } */
+  
 
     .Creation__Items {
         grid-template-rows: repeat(2, 1fr);
@@ -529,7 +508,7 @@ img {
 
     /*Main*/
     .mainContent{
-        grid-template-rows: 38rem 20rem 48rem 6rem;
+        grid-template-rows: 38rem 20rem 58rem 6rem;
         row-gap: 8rem; 
         /*28rem 20rem 48rem 6rem*/
     }
@@ -570,7 +549,43 @@ img {
 
     /*Creations*/
 
-    
+    .CreationContent {
+        display: grid;
+        grid-template-rows: 3rem 1fr;
+        row-gap: 2rem;
+    }
+
+    .CreationContent>p{
+        display: none;
+    }
+
+    .Creation__Top--Desktop{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12rem;
+        align-items: center;
+    }
+
+    .Creation__Top--Desktop>p{
+        text-transform: uppercase;
+        font-family: var(--Josefin_Sans);
+        font-size: 2rem;
+    }
+
+    .Creation__Top--Desktop>.Creation__SeeMore>button{
+        padding: .2rem 2.3rem;
+        font-size: 1rem;
+        border: 1px solid var(--Very_Dark_Gray);
+    }
+
+    .ButtonBotton{
+        display: none;
+    }
+
+    .Creation__Items {
+        grid-template-columns: repeat(4,16.4%);
+        gap: 2rem;
+    }
 
 
 
