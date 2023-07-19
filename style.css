@@ -31,11 +31,12 @@ img {
 
 
 .mainContent {
-    min-width: 375px;
     display: grid;
     grid-template-rows: 42rem 35rem 1fr 35rem;
     /*42rem 40rem 42rem 30rem*/
     row-gap: 5rem;
+    padding: 0;
+    min-width: 375px;
     /*8 rem*/
 }
 
@@ -143,7 +144,7 @@ img {
 
 .HistoryContent>img {
     max-height: 100%;
-    /* margin: 0 auto; */
+    margin: 0 auto;
 }
 
 .HistoryContent>img:nth-child(2) {
@@ -341,11 +342,11 @@ img {
 
 /*@media  Tablet: 768px*/
 
-@media screen and (min-width:700px) {
+@media screen and (min-width:736px) {
 
     /*Main Content*/
     .mainContent {
-        grid-template-rows: 28rem 20rem 48rem 35rem;
+        grid-template-rows: 28rem 20rem 48rem 6rem; /*28rem 20rem 48rem 35rem*/
         /*28rem 35rem 1rem 30rem*/
     }
 
@@ -423,8 +424,6 @@ img {
     .CreationContent {
         display: grid;
         grid-template-rows: 3rem 1fr 3.5rem;
-        /*3rem auto 5rem*/
-        /*3rem 1fr 3.5rem*/
         row-gap: 2rem;
     }
 
@@ -494,6 +493,31 @@ img {
 
     .Fisheye {
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./images/desktop/image-fisheye.jpg);
+    }
+
+    /*Fotter*/
+    .FotterContent{
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-rows: repeat(2,3rem);
+        /* row-gap: 2rem; */
+        padding: .5rem 3rem;
+    }
+
+    .Fotter__Title{
+        height: 1.5rem;
+    }
+
+    .Fotter__nav{
+        flex-direction: row;
+        column-gap: 1rem;
+        font-size: .8rem;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .Fotter_Social{
+        justify-content: end;
     }
 
 }
