@@ -142,6 +142,10 @@ img{
     /* margin: 0 auto; */
 }
 
+.HistoryContent>img:nth-child(2){
+    display: none;
+}
+
 .History__Description{
     display: flex;
     flex-direction: column;
@@ -328,10 +332,12 @@ img{
 /*@media  Tablet: 768px*/
 
 @media screen and (min-width:700px){
+    /*Main Content*/
     .mainContent{
-        grid-template-rows: 28rem 35rem 1fr 35rem; /*42rem 40rem 42rem 30rem*/
+        grid-template-rows: 28rem 20rem 1fr 35rem; /*28rem 35rem 42rem 30rem*/
     }
 
+    /*Header*/
     .Header{
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(./images/desktop/image-hero.jpg);
         padding: 1rem 2.5rem;
@@ -348,22 +354,58 @@ img{
     }
 
     .Header__Body{
-        grid-area: HeaderBody;
-        display: flex;
-        height: 15rem;
-        margin-top: 5rem;
-        /* justify-content: center; */
-        align-items: center;
-        border: 2px solid var(--White);
-        font-family: var(--Josefin_Sans);
-        font-size: 3rem;
-        text-align: center;
-        transition: all .7s;
-        /* display: none; */
-
         width: 30rem;
         height: 12rem;
         text-align: left;
-        /* margin-left: 2rem; */
     }
+
+    /*History*/
+    .HistoryContent{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 29rem;
+        grid-template-areas: "Column1";
+        align-items: center;
+        row-gap:1rem;
+        padding: 0 1.7rem;
+    }
+
+    .HistoryContent>img:nth-child(1){
+        display: none;
+    }
+
+    .HistoryContent>img:nth-child(2){
+        display: block;
+    }
+
+    .HistoryContent>img{
+        grid-area: Column1;
+        
+    }
+
+
+
+    .History__Description{
+        grid-area: Column1;
+        background-color: var(--White);
+        width: 24rem;
+        height: auto; /*13rem*/
+        transform: translateY(40%);
+        position: relative;
+        z-index: 9;
+        left: 23.3rem;
+        top: -1.5rem;
+        padding: 3rem 0 0rem 0 ;    
+        /* overflow: hidden; */
+    }
+
+    .History__Description>p:first-child{
+        font-size: 2rem;
+    }
+
+    .History__Description>p:nth-child(2){
+        font-size: .8rem;
+    }
+
+
 }
